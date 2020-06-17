@@ -3,6 +3,7 @@
 A new Flutter application.
 
 ## Getting Started
+@Author Tondji Kevin
 
 This project is a starting point for a Flutter application.
 
