@@ -1,5 +1,6 @@
 import 'package:covid19byimindcorp/blocs/bloc_provider.dart';
 import 'package:covid19byimindcorp/models/countries.dart';
+import 'package:covid19byimindcorp/services/covid_api.dart';
 import 'package:covid19byimindcorp/ui/list/list_country.dart';
 import 'package:covid19byimindcorp/blocs/bloc_countries.dart';
 import 'package:covid19byimindcorp/ui/widgets/no_data.dart';
@@ -7,11 +8,9 @@ import 'package:flutter/material.dart';
 
 
 class HomeScreen extends StatelessWidget{
-
-
   @override
   Widget build(BuildContext context) {
-
+CovidApi().fetchCountries();
     final height1 = MediaQuery.of(context).size.height /1.2;
     final bloc= BlocProvider.of<BlocCountries>(context);
     return Scaffold(

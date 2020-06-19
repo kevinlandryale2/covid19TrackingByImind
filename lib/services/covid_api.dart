@@ -12,12 +12,7 @@ import 'package:http/http.dart' as http;
        final body = json.decode(result.body);
        return body;
      }
-     fetchCountries()async{
-       final List<dynamic> list= await request(_allCountries());
-       list.forEach((f){
-         print("liste: $f");
-       });
-     }
+
 
      Future<List<Countries>> fectchCountriesData() async{
        final List<dynamic> list= await request(_allCountries());
@@ -25,7 +20,12 @@ import 'package:http/http.dart' as http;
      }
 
 
-
+     fetchCountries()async{
+       final List<dynamic> list= await request(_allCountries());
+       list.forEach((f){
+         print("liste: $f");
+       });
+     }
 
    }
 /* fectchGgobalData() async{

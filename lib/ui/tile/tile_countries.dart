@@ -28,10 +28,10 @@ class TileCountries extends StatelessWidget {
                   //Image.network(countrie.drapeau, width: MediaQuery.of(context).size.width/8,height: MediaQuery.of(context).size.height/8,)
                   Container(
                     height: 80,
-                    width: MediaQuery.of(context).size.width/8,
-                    color: Color.fromRGBO(29, 36, 49, 1),
-                    child:Text('Drapeau du '+countrie.country, style: TextStyle(color: Colors.white),),
-                    //new Image.network(countrie.drapeau,)
+                    width: MediaQuery.of(context).size.width/4,
+                    //
+                    child:Image.network(countrie.countryInfo.flag)
+
                     //
                   ),
                 ],
