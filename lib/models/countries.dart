@@ -22,7 +22,4 @@ Countries.fromJson(Map json):
       actif= json["active"],
       critique= json["critical"],
       continent= json["continent"];
-
-
 }
-//@Author Kevin Tondji

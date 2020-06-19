@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:covid19byimindcorp/blocs/bloc.dart';
 import 'package:covid19byimindcorp/models/countries.dart';
 import 'package:covid19byimindcorp/services/covid_api.dart';

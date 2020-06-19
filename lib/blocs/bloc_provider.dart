@@ -4,16 +4,19 @@ class BlocProvider <T extends Bloc> extends  StatefulWidget{
   final T bloc;
   final Widget child;
   BlocProvider({@required this.bloc, @required this.child});
-  State createState()=> _BlocProviderState();
+
   static Type _providerType<T>()=>T;
-  static T of<T extends Bloc>(BuildContext context){
+  static T of<T extends Bloc>(BuildContext context) {
     final BlocProvider<T> _provider = context.findAncestorWidgetOfExactType<BlocProvider<T>>();
     return _provider.bloc;
   }
+  State createState()=> _BlocProviderState();
 }
-class _BlocProviderState extends State<BlocProvider>{
+class _BlocProviderState extends State<BlocProvider>{ 
   @override
-  Widget build(BuildContext context) => widget.child;
+  Widget build(BuildContext context) {
+    return widget.child;
+  }
   @override
   void dispose() {
     widget.bloc.dispose();

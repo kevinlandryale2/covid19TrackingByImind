@@ -1,3 +1,5 @@
+import 'package:covid19byimindcorp/blocs/bloc_countries.dart';
+import 'package:covid19byimindcorp/blocs/bloc_provider.dart';
 import 'package:covid19byimindcorp/ui/screen/home_screen.dart';
 import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
@@ -12,8 +14,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.pink,
       ),
-      home: HomeScreen(),
-      //BlocProvider<BlocCountries>(bloc:BlocCountries() , child:HomeScreen() ,),
+      home:BlocProvider<BlocCountries>(bloc: BlocCountries(), child: HomeScreen(),),
+
     );
   }
 }

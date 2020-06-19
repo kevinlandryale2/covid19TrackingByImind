@@ -9,7 +9,7 @@ class ListCountry extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return ListView.builder(
-      scrollDirection: Axis.vertical,
+      //scrollDirection: Axis.vertical,
      itemCount: countries.length,
         itemBuilder: (ctx, i)=>TileCountries(countries[i])
     );

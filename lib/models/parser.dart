@@ -1,4 +1,4 @@
-import 'package:webfeed/webfeed.dart';
+/*import 'package:webfeed/webfeed.dart';
 import 'package:http/http.dart';
 import 'dart:async';
 class Parser{
@@ -14,4 +14,4 @@ class Parser{
       print("erreur ${reponse.statusCode}");
     }
   }
-}
+}*/
