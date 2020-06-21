@@ -2,8 +2,7 @@ import 'package:covid19byimindcorp/models/countries.dart';
 import 'package:http/http.dart' as http;
   import 'dart:convert' show json;
    class CovidApi {
-  //   final _baseUrl = "https://covidtracking.com/api/v1/us/";
-    // String _globalInfo() => _baseUrl + "current.json";
+    // String _globalInfo() => _baseUrl + "current.  //   final _baseUrl = "  https://covidtracking.com/api/v1/us/";json";
      final _baseUrl2 = "https://corona.lmao.ninja/v2/";
      String _allCountries()=> _baseUrl2+"countries";
 
@@ -12,8 +11,7 @@ import 'package:http/http.dart' as http;
        final body = json.decode(result.body);
        return body;
      }
-
-
+     
      Future<List<Countries>> fectchCountriesData() async{
        final List<dynamic> list= await request(_allCountries());
        return list.map((json)=>Countries.fromJson(json)).toList();
@@ -28,9 +26,3 @@ import 'package:http/http.dart' as http;
      }
 
    }
-/* fectchGgobalData() async{
-       final List<dynamic> list= await request(_globalInfo());
-       list.forEach((f) {
-         print("Liste : $f");
-       });
-     }*/

@@ -12,6 +12,7 @@ class HomeScreen extends StatelessWidget{
   Widget build(BuildContext context) {
 CovidApi().fetchCountries();
     final height1 = MediaQuery.of(context).size.height /1.2;
+final height2 = MediaQuery.of(context).size.height /17;
     final bloc= BlocProvider.of<BlocCountries>(context);
     return Scaffold(
         backgroundColor: Color.fromRGBO(245, 245, 244, 1),
@@ -22,7 +23,9 @@ CovidApi().fetchCountries();
         body:Center(
           child:  Column(
             children: <Widget>[
-              Container(child: Text('A faire plus tard'),),
+              Container(
+               height: height2,
+                child: Text('A faire plus tard'),),
               Container(
                 height: height1,
                 width: MediaQuery.of(context).size.width/1.1,

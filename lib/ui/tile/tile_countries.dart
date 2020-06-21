@@ -29,10 +29,7 @@ class TileCountries extends StatelessWidget {
                   Container(
                     height: 80,
                     width: MediaQuery.of(context).size.width/4,
-                    //
                     child:Image.network(countrie.countryInfo.flag)
-
-                    //
                   ),
                 ],
               ),
